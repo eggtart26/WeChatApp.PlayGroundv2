@@ -2,6 +2,7 @@ plugins {
     id 'java'
     id 'org.springframework.boot' version '3.2.1'
     id 'io.spring.dependency-management' version '1.1.4'
+    id 'com.palantir.docker' version '0.35.0'
 }
 
 group = 'com.example'
@@ -20,6 +21,19 @@ dependencies {
     implementation 'org.springframework.boot:spring-boot-starter-web'
     testImplementation 'org.springframework.boot:spring-boot-starter-test'
     developmentOnly 'org.springframework.boot:spring-boot-devtools'
+}
+
+springBoot {
+    buildInfo()
+}
+bootJar {
+    duplicatesStrategy = DuplicatesStrategy.EXCLUDE
+}
+docker {
+    name "wechatappplaygroundv2"
+    dockerfile file('Dockerfile')
+    files bootJar.outputs.files
+    buildArgs(['JAR_FILE': "${bootJar.archiveFileName.get()}"])
 }
 
 tasks.named('test') {

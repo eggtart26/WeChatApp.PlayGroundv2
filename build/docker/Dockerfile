@@ -1,0 +1,5 @@
+FROM azul/zulu-openjdk-alpine:17
+VOLUME /tmp
+ARG JAR_FILE=app.jar
+COPY ${JAR_FILE} app.jar
+ENTRYPOINT ["java", "-jar", "/app.jar"]
