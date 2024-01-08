@@ -11,42 +11,102 @@ public class UserAddressTesting {
     private String id;
 
 
-    @Field("street")
-    private String street;
-    @Field("city")
-    private String city;
-    @Field("zipCode")
-    private String zipCode;
+    @Field("address")
+    private String address;
+    @Field("cityId")
+    private String cityId;
+    @Field("districtId")
+    private String districtId;
+    @Field("isDefault")
+    private boolean isDefault;
+    @Field("linkMan")
+    private String linkMan;
+    @Field("mobile")
+    private String mobile;
+    @Field("provinceId")
+    private String provinceId;
+    @Field("token")
+    private String token;
 
 
     // Getters and setters for all fields
-    // Getter for street
-    public String getStreet() {
-        return street;
+    // Getter for address
+    public String getAddress() {
+        return address;
     }
 
-    // Setter for street
-    public void setStreet(String street) {
-        this.street = street;
+    // Setter for address
+    public void setAddress(String address) {
+        this.address = address;
     }
 
-    // Getter for city
-    public String getCity() {
-        return city;
+    // Getter for cityId
+    public String getCityId() {
+        return cityId;
     }
 
-    // Setter for city
-    public void setCity(String city) {
-        this.city = city;
+    // Setter for cityId
+    public void setCityId(String cityId) {
+        this.cityId = cityId;
     }
 
-    // Getter for zipCode
-    public String getZipCode() {
-        return zipCode;
+    // Getter for districtId
+    public String getDistrictId() {
+        return districtId;
     }
 
-    // Setter for zipCode
-    public void setZipCode(String zipCode) {
-        this.zipCode = zipCode;
+    // Setter for districtId
+    public void setDistrictId(String districtId) {
+        this.districtId = districtId;
+    }
+
+    // Getter for isDefault
+    public boolean getIsDefault() {
+        return isDefault;
+    }
+
+    // Setter for isDefault
+    public void setIsDefault(boolean isDefault) {
+        this.isDefault = isDefault;
+    }
+
+    // Getter for linkMan
+    public String getLinkMan() {
+        return linkMan;
+    }
+
+    // Setter for linkMan
+    public void setLinkMan(String linkMan) {
+        this.linkMan = linkMan;
+    }
+
+    // Getter for provinceId
+    public String getProvinceId() {
+        return provinceId;
+    }
+
+    // Setter for provinceId
+    public void setProvinceId(String provinceId) {
+        this.provinceId = provinceId;
+    }
+
+    // Getter for token
+    public String getToken() {
+        return token;
+    }
+
+    // Setter for token
+    public void setToken(String token) {
+        this.token = token;
+    }
+
+    // Getter for districtId
+    public String getMobile() {
+        return mobile;
+    }
+
+    // Setter for districtId
+    public void setMobile(String mobile) {
+        this.mobile = mobile;
     }
 }
