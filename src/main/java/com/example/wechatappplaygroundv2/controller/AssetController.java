@@ -6,10 +6,10 @@ import org.springframework.web.bind.annotation.*;
 public class AssetController {
     @GetMapping("/asset/get")
     public String getAssets() {
-        return "Hello, this is a Get request!";
+        return "Hello, this is a Get request! v2";
     }
 
-    @PostMapping("asset/onboard")
+    @PostMapping("/asset/onboard")
     public String onboardAssets(@RequestBody String message) {
         return "You posted: " + message;
     }
