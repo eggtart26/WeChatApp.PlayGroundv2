@@ -21,5 +21,6 @@ public class UserTestingController {
     public ResponseEntity<List<UserTesting>> getAllUserTesting() {
         return ResponseEntity.ok(service.getAllUserTesting());
     }
+
 }
 
