@@ -109,4 +109,5 @@ public class UserAddressTesting {
     public void setMobile(String mobile) {
         this.mobile = mobile;
     }
+
 }
